@@ -23,9 +23,8 @@ const monospaceFont = css`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 `;
 
-export default props => (
+export default () => (
     <Global
-        {...props}
         styles={css`
             body {
                 ${bodyOverrides}

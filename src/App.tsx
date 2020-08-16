@@ -8,6 +8,7 @@ const AppContainer = styled.div`
   min-height: 100vh;
   width: 100vw;
 `;
+
 const AppHeader = styled.div`
   ${alignCenter}
   flex-direction: column;
