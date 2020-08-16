@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from '@emotion/styled';
+import palette from './styles/palette'
+import { alignCenter } from './styles/utilityStyles';
+
+const { white, gray } = palette;
+
+const AppHeader = styled.div`
+  background-color: ${gray};
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: ${white};
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div css={alignCenter}>
+      <AppHeader>
+          <p>Edit <code>src/App.js</code> and save to reload</p>
+      </AppHeader>
     </div>
   );
 }
