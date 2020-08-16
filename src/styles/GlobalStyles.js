@@ -1,7 +1,15 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
+import palette from './palette'
+
+const { white, gray } = palette;
 
 const bodyOverrides = css`margin: 0;`;
+
+const bodyStyles = css`
+    background-color: ${gray};
+    color: ${white};
+`;
 
 const defaultFont = css`
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -21,6 +29,7 @@ export default props => (
         styles={css`
             body {
                 ${bodyOverrides}
+                ${bodyStyles}
                 ${defaultFont}
             }
             code {

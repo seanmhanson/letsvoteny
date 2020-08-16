@@ -1,28 +1,33 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import palette from './styles/palette'
 import { alignCenter } from './styles/utilityStyles';
+import { ReactComponent as StateIcon } from './images/nystate.svg';
 
-const { white, gray } = palette;
-
-const AppHeader = styled.div`
-  background-color: ${gray};
+const AppContainer = styled.div`
+  ${alignCenter}
   min-height: 100vh;
-  display: flex;
+  width: 100vw;
+`;
+const AppHeader = styled.div`
+  ${alignCenter}
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: ${white};
+`;
+
+const StateOutline = styled(StateIcon)`
+  height: 400px;
+  width: 400px;
+  opacity: 0.5;
 `;
 
 function App() {
   return (
-    <div css={alignCenter}>
+    <AppContainer>
       <AppHeader>
-          <p>Edit <code>src/App.js</code> and save to reload</p>
+      <StateOutline />
+          Let&apos;s Vote New York!
       </AppHeader>
-    </div>
+    </AppContainer>
   );
 }
 
