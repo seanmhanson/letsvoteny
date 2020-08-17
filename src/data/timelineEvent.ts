@@ -3,6 +3,7 @@ import type { DateTime as DateTimeType } from "luxon";
 
 export enum Tag {
   Military,
+  Federal,
   Absentee,
   AbsenteeRequest,
   AbsenteeLetter,
