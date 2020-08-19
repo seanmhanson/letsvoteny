@@ -1,12 +1,14 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { alignCenter } from './styles/utilityStyles';
-import { ReactComponent as StateIcon } from './images/nystate.svg';
+import React from "react";
+import styled from "@emotion/styled";
+import { alignCenter } from "./styles/utilityStyles";
+import { ReactComponent as StateIcon } from "./images/nystate.svg";
+import AddressSection from "./components/AddressSection";
 
 const AppContainer = styled.div`
   ${alignCenter}
   min-height: 100vh;
   width: 100vw;
+  flex-direction: column;
 `;
 
 const AppHeader = styled.div`
@@ -25,9 +27,10 @@ function App() {
   return (
     <AppContainer>
       <AppHeader>
-      <StateOutline />
-          Let&apos;s Vote New York!
+        <StateOutline />
+        Let&apos;s Vote New York!
       </AppHeader>
+      <AddressSection />
     </AppContainer>
   );
 }

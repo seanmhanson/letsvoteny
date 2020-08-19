@@ -16,7 +16,7 @@ export enum Tag {
 export interface TimelineEvent {
   date: DateTimeType;
   tags?: Array<Tag>;
-  description: String;
+  description: string;
 }
 
 export const ElectionDateTime = DateTime.local(2020, 11, 3);
