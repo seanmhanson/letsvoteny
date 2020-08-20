@@ -28,6 +28,7 @@ const AddressSection = () => {
           onChange={({ value }: CountyOption) => {
             setActiveCountyName(value);
           }}
+          data-testid="county-select"
         />
       </AddressSelectContainer>
       <AddressPreview

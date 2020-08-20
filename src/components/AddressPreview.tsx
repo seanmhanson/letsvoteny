@@ -79,7 +79,7 @@ const AddressPreview = ({ countyName, address }: AddressPreviewProps) => {
     `${lineThree}${lineFour && "\n"}`;
 
   return (
-    <AddressPreviewContainer>
+    <AddressPreviewContainer data-testid="address-preview">
       <AddressPreviewLabel>Mailing Address:</AddressPreviewLabel>
       <AddressLine data-testid="line-one">{attentionLine}</AddressLine>
       <AddressLine data-testid="line-two">{lineOne}</AddressLine>
