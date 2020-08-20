@@ -2,6 +2,7 @@ import React from "react";
 import Select from "react-select";
 
 import boardsOfElections from "../data/boardsOfElections";
+import { inputStyles } from "../styles/inputStyles";
 
 export interface CountyOption {
   label: string;
@@ -39,6 +40,7 @@ const CountySelect = ({ activeCountyName, onChange }: CountySelectProps) => {
       value={activeOption}
       options={countyOptions}
       onChange={(option) => onChange(option)}
+      styles={inputStyles}
       isSearchable
     />
   );

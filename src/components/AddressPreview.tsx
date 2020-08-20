@@ -4,7 +4,7 @@ import Clipboard from "clipboard";
 
 import { Address } from "../data/boardsOfElections";
 import palette from "../styles/palette";
-const { lightGray, gray, blue } = palette;
+const { lightGray, darkGray, blue } = palette;
 
 const AddressPreviewContainer = styled.div`
   font-size: 18px;
@@ -39,7 +39,7 @@ const AddressPreviewCopyButton = styled.button`
   text-transform: uppercase;
   height: 28px;
   font-size: 14px;
-  color: ${gray};
+  color: ${darkGray};
   background-color: ${blue};
   border-radius: 4px;
   border: none;

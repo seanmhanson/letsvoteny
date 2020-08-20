@@ -2,14 +2,14 @@ import React from "react";
 import { Global, css } from "@emotion/core";
 import palette from "./palette";
 
-const { white, gray } = palette;
+const { white, darkGray } = palette;
 
 const bodyOverrides = css`
   margin: 0;
 `;
 
 const bodyStyles = css`
-  background-color: ${gray};
+  background-color: ${darkGray};
   color: ${white};
   padding: 50px 0;
 `;
