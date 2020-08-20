@@ -36,7 +36,6 @@ const voterRegistrationEvents: Array<TimelineEvent> = [
   mailRegistrationPostmark,
   mailRegistrationReceived,
   inPersonRegistrationDate,
-  inPersonMilitaryRegistrationDate,
   inPersonRecentCitizenRegistrationDate,
   changeOfAddressDate,
 ];
