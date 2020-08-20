@@ -1,3 +1,5 @@
+![New York State Silhouette](./src/images/nystate.svg)
+
 # Lets Vote NY
 A static site centralizing information about voting in the 2020 General Election in New York State.
 
