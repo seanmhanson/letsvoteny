@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import Clipboard from "clipboard";
 
 import { Address } from "../data/boardsOfElections";
+import palette from "../styles/palette";
+const { lightGray, gray, blue } = palette;
 
 const AddressPreviewContainer = styled.div`
   font-size: 18px;
@@ -13,7 +15,7 @@ const AddressPreviewContainer = styled.div`
 const AddressLine = styled.div`
   font-size: 18px;
   height: 1.66em;
-  border-bottom: 2px solid #8f8f8f;
+  border-bottom: 2px solid ${lightGray};
   padding: 0 20px;
   margin: 10px 0;
   text-align: center;
@@ -24,7 +26,7 @@ const AddressPreviewLabel = styled.div`
   font-weight: bold;
   text-transform: uppercase;
   padding-bottom: 8px;
-  border-bottom: 2px solid #8f8f8f;
+  border-bottom: 2px solid ${lightGray};
 `;
 
 const AddressPreviewFooter = styled.div`
@@ -37,15 +39,15 @@ const AddressPreviewCopyButton = styled.button`
   text-transform: uppercase;
   height: 28px;
   font-size: 14px;
-  color: #282c34;
-  background-color: #0e9daa;
+  color: ${gray};
+  background-color: ${blue};
   border-radius: 4px;
   border: none;
   padding: 0 8px;
   line-height: 14px;
 `;
 
-interface AddressPreviewProps {
+export interface AddressPreviewProps {
   countyName?: string;
   address?: Address;
 }
@@ -79,14 +81,16 @@ const AddressPreview = ({ countyName, address }: AddressPreviewProps) => {
   return (
     <AddressPreviewContainer>
       <AddressPreviewLabel>Mailing Address:</AddressPreviewLabel>
-      <AddressLine>{attentionLine}</AddressLine>
-      <AddressLine>{lineOne}</AddressLine>
-      <AddressLine>{lineTwo}</AddressLine>
-      <AddressLine>{lineThree}</AddressLine>
-      <AddressLine>{lineFour}</AddressLine>
+      <AddressLine data-testid="line-one">{attentionLine}</AddressLine>
+      <AddressLine data-testid="line-two">{lineOne}</AddressLine>
+      <AddressLine data-testid="line-three">{lineTwo}</AddressLine>
+      <AddressLine data-testid="line-four">{lineThree}</AddressLine>
+      <AddressLine data-testid="line-five">{lineFour}</AddressLine>
       <AddressPreviewFooter>
         <AddressPreviewCopyButton
           name="copyAddress"
+          disabled={!countyName || !address}
+          data-testid="copy-address-button"
           data-clipboard-text={addressString}
         >
           Copy
