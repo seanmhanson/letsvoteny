@@ -11,10 +11,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-    - name: Unit Tests
+    - name: Set up Node
+      uses: actions/setup-node@1
+      with:
+        node-version: 12.18.3
+    
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Unit Tests
       run: npm test
 
     - name: Build Project
-      run: npm run-script build
+      run: npm run build
