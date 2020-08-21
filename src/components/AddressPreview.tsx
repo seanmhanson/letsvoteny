@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import styled from "@emotion/styled";
 import Clipboard from "clipboard";
 
+import Button, { ButtonSize } from "../components/Button";
 import { Address } from "../data/boardsOfElections";
 import palette from "../styles/palette";
-const { lightGray, darkGray, blue } = palette;
+const { lightGray } = palette;
 
 const AddressPreviewContainer = styled.div`
   font-size: 18px;
@@ -31,20 +32,6 @@ const AddressPreviewLabel = styled.div`
 
 const AddressPreviewFooter = styled.div`
   text-align: right;
-`;
-
-const AddressPreviewCopyButton = styled.button`
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  height: 28px;
-  font-size: 14px;
-  color: ${darkGray};
-  background-color: ${blue};
-  border-radius: 4px;
-  border: none;
-  padding: 0 8px;
-  line-height: 14px;
 `;
 
 export interface AddressPreviewProps {
@@ -87,14 +74,15 @@ const AddressPreview = ({ countyName, address }: AddressPreviewProps) => {
       <AddressLine data-testid="line-four">{lineThree}</AddressLine>
       <AddressLine data-testid="line-five">{lineFour}</AddressLine>
       <AddressPreviewFooter>
-        <AddressPreviewCopyButton
+        <Button
           name="copyAddress"
+          size={ButtonSize.Small}
           disabled={!countyName || !address}
           data-testid="copy-address-button"
           data-clipboard-text={addressString}
         >
           Copy
-        </AddressPreviewCopyButton>
+        </Button>
       </AddressPreviewFooter>
     </AddressPreviewContainer>
   );
