@@ -1,4 +1,4 @@
-# Lets Vote NY
+# Let's Vote NY
 A static site centralizing information about voting in the 2020 General Election in New York State.
 
 ![CI/CD](https://github.com/seanmhanson/letsvoteny/workflows/CI/badge.svg) 
@@ -27,7 +27,7 @@ This project seeks to address the following goals, by priority:
 - **LOW PRIORITY**: provide steps for applying for a New York state photo ID, and/or other requirements for voter registration
 
 ## Available Scripts
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), which provides the following scripts:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), which provides the `start`, `test`, and `build` scripts.
 
 ### `npm start`
 
@@ -40,3 +40,7 @@ Launches the test runner in the interactive watch mode.
 ### `npm run build`
 
 Builds the app for production to the `build` folder, ready for [deployment](https://facebook.github.io/create-react-app/docs/deployment).
+
+### `npm run lint`
+
+Runs linting checks directly. Note that this already logs to the console in development as well as during a build, and is meant primarily for flexible usage options with CI.
