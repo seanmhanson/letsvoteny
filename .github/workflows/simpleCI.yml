@@ -22,8 +22,25 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Run Unit Tests
-      run: npm test
-
     - name: Build Project
       run: npm run build
+  test: 
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '12'
+    
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Check Linting
+      run: npm lint
+
+    - name: Run Unit Tests
+      run: npm test

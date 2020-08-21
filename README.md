@@ -1,6 +1,10 @@
 # Lets Vote NY
 A static site centralizing information about voting in the 2020 General Election in New York State.
 
+![CI/CD](https://github.com/seanmhanson/letsvoteny/workflows/CI/badge.svg) 
+![License](https://img.shields.io/github/license/seanmhanson/letsvoteny)
+
+
 ## Project Goals
 This project seeks to address the following goals, by priority:
 
